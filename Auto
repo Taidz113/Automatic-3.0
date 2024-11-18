@@ -1,5 +1,5 @@
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function ngegdKJaYobmeOTnlUpDindQbs(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
 data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
 
@@ -7,60 +7,66 @@ data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) i
  
 
 
--- Tạo GUI và các phần tử khác
+-- Tạo GUI và các phần tử
 local player = game.Players.LocalPlayer
-local gui = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('YPXhMFZXMiIvAPYBygEzKPeyhkvWktODBtNRLbZgsyBYAJfOkbyxsqAU2NyZWVuR3Vp'), player:WaitForChild(ngegdKJaYobmeOTnlUpDindQbs('BppFeXvmhdRnsFRtyrSgAewcvmWZxtLjCMSEqgToEWZPHkkPaSyFntqUGxheWVyR3Vp')))
-local mainFrame = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('cgdgBaqQzamyuHmMzTHvBoRuaMVLwuKqQJJhoVNFGekEGLJBbzMIkFZRnJhbWU='), gui)
-local title = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('tzZOVmPzlMiJJXYSkEDvSWTdmsCkgObTAYJMEnijyfUkJVGFSDCpOamVGV4dExhYmVs'), mainFrame)
-local toggleButton = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('VXdjdoFmUdKWgOHnfqIanCjWjpWDSspIeTubZoMQFjtvCYznSaaPnGRVGV4dEJ1dHRvbg=='), mainFrame)
-local autoFixLagSwitch = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('hsmYsGLodmRynnPJpxjHypUaBtQNDAhyhkTKsukQcJgrcIZsZjxqLvKVGV4dEJ1dHRvbg=='), mainFrame)
-local autoParrySwitch = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('OGJPamSexsSEhYWhPmQoIeNaxtmdfWMiTbPRUbklFBNmIttunRuWYwnVGV4dEJ1dHRvbg=='), mainFrame)
-local autoSpamSwitch = Instance.new(ngegdKJaYobmeOTnlUpDindQbs('vWSNhfSMmKlSfrtxKHJWacivwPRGekRVwetMdDryfCYUwApfyNuQvRRVGV4dEJ1dHRvbg=='), mainFrame)
+local gui = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('YuBCslPYwEHDTMwecNyYbYIKuWSfBWNoSBMvjbfNqOLlujmMrUPsHFRU2NyZWVuR3Vp'))
+local mainFrame = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('GdRZqKSFIUPmoCMEjOPRoErxTNkwPpTqEyZoZgaPBZtzcuKQKNnphMXRnJhbWU='))
+local title = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('iXpWIwvxEUZeTmzyKkaKVbEvtsbEWCYEbJNuSugGUKBILBanVgaZrbUVGV4dExhYmVs'))
+local toggleButton = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('coRtaVvcACAttlTiExyBEARIHwCmYcNLZXJdQBvhYTzZyBiotaaAWEvVGV4dEJ1dHRvbg=='))
+local autoFixLagSwitch = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('vTfEmzVBZPEhvQKPlUpHicwHvITvbLJBnPmHaOkSXScAJyFUUkWhYKTVGV4dEJ1dHRvbg=='))
+local autoParrySwitch = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('IrwJoQJPOieIUKamTKYxkxcYENWBRYvGCXLsUFbnsULsDFCNTUoUVgOVGV4dEJ1dHRvbg=='))
+local autoSpamSwitch = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('eBYUwpLdoaMMWkDAxvUNbJUSSbVxwKFiZXQjcCyDvPLuADJtQWxlfDzVGV4dEJ1dHRvbg=='))
 
--- Các thuộc tính menu
-gui.Name = ngegdKJaYobmeOTnlUpDindQbs('BSmQQPeRxdfxROvQpmJlWOxcXlavavIxbTHtcNnZgsLsTVDjcKAAwzrTWVudUF1dG8=')
+-- Thuộc tính Menu
+gui.Name = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('KddcDFegrSYvZMDTGuHNXtBvXxLbhbWCLHAnUKDagkgEoKwwkYTUyGzTWVudUF1dG8=')
+gui.Parent = player:WaitForChild(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('ggxwYKDCRuNNaLolwvidGQiykVAniPDSXqpDiFroZnFwAHYRRlOffJUUGxheWVyR3Vp'))
 mainFrame.Size = UDim2.new(0, 200, 0, 150)
 mainFrame.Position = UDim2.new(0.5, -100, 0.5, -75)
 mainFrame.BackgroundColor3 = Color3.new(0, 0, 0)
 mainFrame.BackgroundTransparency = 0.3
-mainFrame.Visible = true
+mainFrame.Parent = gui
 
-title.Text = ngegdKJaYobmeOTnlUpDindQbs('ZIfllNvUqbAtyvjfSRaBOCoBoqKjdbCSaPLKloiWxrwhfcLjRpUCdNETWVudSBBdXRvIDMuMA==')
+title.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('tmjfyEpMhqcCiBKGpaQLZASKYuZmouqjrzJqAjqHtXueGqMviSawObYTWVudSBBdXRvIDMuMA==')
 title.Size = UDim2.new(1, 0, 0, 25)
 title.BackgroundTransparency = 1
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.Font = Enum.Font.SourceSansBold
 title.TextScaled = true
+title.Parent = mainFrame
 
-toggleButton.Text = ngegdKJaYobmeOTnlUpDindQbs('XXRMPFhkJjDPFjihJnapEZvBHGvDxNhDvZKsFXzsCvupcmEYpyFgBXKLQ==')
+toggleButton.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('VHGNmjUDIfSGkbXPTkrZgBFsgcfpKOEwKIvuvbUnpqaHRNrGPpIRpqFLQ==')
 toggleButton.Size = UDim2.new(0, 25, 0, 25)
 toggleButton.Position = UDim2.new(1, -30, 0, 0)
 toggleButton.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 toggleButton.TextColor3 = Color3.new(1, 1, 1)
 toggleButton.Font = Enum.Font.SourceSansBold
+toggleButton.Parent = mainFrame
 
-autoFixLagSwitch.Text = ngegdKJaYobmeOTnlUpDindQbs('QvXJBzxWEjdCVTKNTswljhMHnqiOWlqICDVaeSCDVbXdJEfoNvjVDvsQXV0byBGaXggTGFnOiBPRkY=')
+autoFixLagSwitch.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('KApNhFhqKwQzFJjVHecTPWJbAaCSoqaohMmSzsyAECGIMHsfbJmvQHyQXV0byBGaXggTGFnOiBPRkY=')
 autoFixLagSwitch.Size = UDim2.new(1, -20, 0, 25)
 autoFixLagSwitch.Position = UDim2.new(0, 10, 0, 30)
 autoFixLagSwitch.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 autoFixLagSwitch.TextColor3 = Color3.new(1, 1, 1)
 autoFixLagSwitch.Font = Enum.Font.SourceSansBold
+autoFixLagSwitch.Parent = mainFrame
 
-autoParrySwitch.Text = ngegdKJaYobmeOTnlUpDindQbs('EaOLPRAVPmxltEMavjxDFzfJERYojerETSqrFwJWkPBpKNiXQBaQWZiQXV0byBQYXJyeTogT0ZG')
+autoParrySwitch.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('RkHqfkMgFgtldpyktTVjBzYuZILZKRATzBDZMaKGYptmQaSxTBvBGQAQXV0byBQYXJyeTogT0ZG')
 autoParrySwitch.Size = UDim2.new(1, -20, 0, 25)
 autoParrySwitch.Position = UDim2.new(0, 10, 0, 60)
 autoParrySwitch.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 autoParrySwitch.TextColor3 = Color3.new(1, 1, 1)
 autoParrySwitch.Font = Enum.Font.SourceSansBold
+autoParrySwitch.Parent = mainFrame
 
-autoSpamSwitch.Text = ngegdKJaYobmeOTnlUpDindQbs('CJHgyzATNYVDOCwCsffPtJBukFbLjPKgssGuqzRWAaocTwIuklwrYCdQXV0byBTcGFtOiBPRkY=')
+autoSpamSwitch.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('tlglBNYZQEROrsidxHjtagWQqeTUPpgBAzwYuwvsETLEMMNkEsFqMAPQXV0byBTcGFtOiBPRkY=')
 autoSpamSwitch.Size = UDim2.new(1, -20, 0, 25)
 autoSpamSwitch.Position = UDim2.new(0, 10, 0, 90)
 autoSpamSwitch.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 autoSpamSwitch.TextColor3 = Color3.new(1, 1, 1)
 autoSpamSwitch.Font = Enum.Font.SourceSansBold
+autoSpamSwitch.Parent = mainFrame
 
--- Thêm Drag cho menu
+-- Drag menu
 local function enableDrag(frame)
     local dragging, dragStart, startPos
 
@@ -113,117 +119,80 @@ spawn(function()
     end
 end)
 
--- Thu gọn và mở rộng menu
+-- Thu gọn/mở rộng menu
 local isExpanded = true
 toggleButton.MouseButton1Click:Connect(function()
     isExpanded = not isExpanded
     autoFixLagSwitch.Visible = isExpanded
     autoParrySwitch.Visible = isExpanded
     autoSpamSwitch.Visible = isExpanded
-    toggleButton.Text = isExpanded and ngegdKJaYobmeOTnlUpDindQbs('MNfflIKIYvXGuHAyeYbSdScxopFGTVWNmsOcothayJFcsQtGUeHtoSmLQ==') or ngegdKJaYobmeOTnlUpDindQbs('PJhmMeNkuUBqoqDsHawVeZhCOltoEGLMyzlDtiqiphAjCAkZvPsXkNoKw==')
+    toggleButton.Text = isExpanded and NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('CSyGOtPziTeOCjZbICcqlIDtutXSjudztoUmUVQsLUnUljvJpeUSwqULQ==') or NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('xIYeZKiyoJiolrsrrRgAOLUIwRGxcJoSpvoRZJxRJTUpNtygdsTKseXKw==')
     mainFrame.Size = UDim2.new(0, 200, 0, isExpanded and 150 or 25)
 end)
 
--- Logic Auto Fix Lag
-local autoFixLagActive = false
-autoFixLagSwitch.MouseButton1Click:Connect(function()
-    autoFixLagActive = not autoFixLagActive
-    autoFixLagSwitch.Text = ngegdKJaYobmeOTnlUpDindQbs('upjirASebKBgSwGwVWlZxlpANXCQdOdVDdSkNESllaLTlFyqQdnGnKwQXV0byBGaXggTGFnOiA=') .. (autoFixLagActive and ngegdKJaYobmeOTnlUpDindQbs('FOhFyeBlVIDhLIxgUuDFMxQOnrxCXbbHBwzTmEewheuiFLXHeyKXnhUT04=') or ngegdKJaYobmeOTnlUpDindQbs('qmZNyEsWtkGPffocZKXdRxwcgRudlvWZkrxvpRJqJiqWXVmDZjEFgjpT0ZG'))
-    if autoFixLagActive then
-        -- Logic giảm lag (nếu có)
-    end
+-- Giữ menu khi người chơi chết
+player.CharacterAdded:Connect(function()
+    gui.Parent = player:WaitForChild(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('vUJEyofqXHytyrrkJeRSebLqtZSlxkySLikFQbOtcUQJXroVNoqTTlwUGxheWVyR3Vp'))
 end)
--- Auto Parry 3.0 và Auto Spam 3.0 với phát hiện bóng cải tiến
+
+-- Auto Parry Logic
 local autoParryActive = false
 local autoSpamActive = false
+local parryCircle
 
--- Hàm phát hiện bóng (tìm bằng nhiều tiêu chí)
-local function detectBall()
-    local region = Region3.new(
-        Vector3.new(-50, -50, -50),
-        Vector3.new(50, 50, 50)
-    )
-    local parts = workspace:FindPartsInRegion3(region, nil, math.huge)
-
-    for _, part in ipairs(parts) do
-        if part:IsA(ngegdKJaYobmeOTnlUpDindQbs('bzKVtmFxZdhXWqFUfOJkxxlgvDJllKAhOXoefmEvPIIfNGrxcEVttJkQmFzZVBhcnQ=')) and part.Name == ngegdKJaYobmeOTnlUpDindQbs('HMInKLjfpgIqBPJyfAjZxgOGlzBbuEfjyJgFiDdbNgPnmHFPxCAjBHUQmFsbA==') then
-            local color = part.BrickColor
-            local size = part.Size
-            local velocity = part.Velocity
-            local shape = part.Shape
-
-            -- Kiểm tra điều kiện xác định bóng
-            if (color == BrickColor.new(ngegdKJaYobmeOTnlUpDindQbs('ewjYqCbDFEPdznpGadfnQPDazqdLCmHRxMpNQmHDjjWanZBCSjVFGNUV2hpdGU=')) or color == BrickColor.new(ngegdKJaYobmeOTnlUpDindQbs('XZCzDWObfmwNDcTxSOnbozFgJHStDTxptkAZXAXHyhzJMnIySLPKgAzQnJpZ2h0IHJlZA=='))) and
-               size.X <= 10 and size.Y <= 10 and size.Z <= 10 and
-               velocity.Magnitude > 0 and
-               shape == Enum.PartType.Ball then
-                return part
-            end
-        end
+local function updateCircle(radius)
+    if parryCircle then
+        parryCircle:Destroy()
     end
-    return nil
+    parryCircle = Instance.new(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('HczFDjTFhdweCsrmOufRqPTQcfPHZKJKCsdLeoszDayOWMShhgKKvAjUGFydA=='))
+    parryCircle.Shape = Enum.PartType.Ball
+    parryCircle.Size = Vector3.new(radius * 2, 0.2, radius * 2)
+    parryCircle.Anchored = true
+    parryCircle.CanCollide = false
+    parryCircle.Material = Enum.Material.Neon
+    parryCircle.Color = Color3.fromRGB(255, 0, 0)
+    parryCircle.Parent = workspace
 end
 
--- Cải tiến Auto Parry 3.0
-local function autoParryV3_0()
-    while autoParryActive do
-        local ball = detectBall()
-        if ball and player.Character and player.Character:FindFirstChild(ngegdKJaYobmeOTnlUpDindQbs('XdbKiGjjkcGVQdMnrUMWtqxHbEfDiEenHMsPMzeiwfLaEvkcibqlYtESHVtYW5vaWRSb290UGFydA==')) then
-            local charPosition = player.Character.HumanoidRootPart.Position
-            local ballPosition = ball.Position
-            local ballVelocity = ball.Velocity.Magnitude
-            local distance = (ballPosition - charPosition).Magnitude
+local function autoParry()
+    spawn(function()
+        while autoParryActive do
+            local ball = workspace:FindFirstChild(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('FFekmeqXRtcNDZleOdaeeSmuMGlfzlEXHoTjcEZIJpdgwQzwHdFVCwwQmFsbA==')) -- Cập nhật nếu tên khác
+            if ball then
+                local playerPos = player.Character.HumanoidRootPart.Position
+                local ballPos = ball.Position
+                local distance = (ballPos - playerPos).Magnitude
 
-            -- Tính toán hướng di chuyển
-            local direction = (ballPosition - charPosition).unit
-            local ballDirection = ball.Velocity.Unit
-            local dotProduct = direction:Dot(ballDirection)
-
-            -- Điều kiện parry
-            if distance <= 15 and ballVelocity > 50 and dotProduct > 0.5 then
-                print(ngegdKJaYobmeOTnlUpDindQbs('tyzqkSYJZnPTRoqRCWRJybAsZmNsdwqBJaIrJPdjSBqarJguOyyuoEjQXV0byBQYXJyeTogQmFsbCBkZXRlY3RlZCBhbmQgcGFycmllZCE='))
-                -- Thêm hành động Parry tại đây (ví dụ: kích hoạt kỹ năng)
-                wait(0.005) -- Giảm độ trễ
+                -- Cập nhật vòng tròn theo tốc độ bóng
+                updateCircle(math.clamp(distance, 5, 30))
+                if distance <= 15 then
+                    print(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('GoRPwabosSutSLldHZOvTIpGXyxgHyOjtCfrCnblcDnmReApkahqaYDQXV0byBQYXJyeTogQmxvY2tpbmch'))
+                end
             end
+            wait(0.05)
         end
-        game:GetService(ngegdKJaYobmeOTnlUpDindQbs('RKjmWyYfcgOIrrvmDgRFnvqbINrgYOomwaYdMBvCBAFpJTJLEWJJBIvUnVuU2VydmljZQ==')).RenderStepped:Wait()
-    end
+        if parryCircle then parryCircle:Destroy() end
+    end)
 end
 
--- Cải tiến Auto Spam 3.0
-local function autoSpamV3_0()
-    while autoSpamActive do
-        local ball = detectBall()
-        if ball and player.Character and player.Character:FindFirstChild(ngegdKJaYobmeOTnlUpDindQbs('ocupWUvdXzaRwumwaRmKzswylMftcBJRnnHHrlQkmANDHEIPFzpbHxiSHVtYW5vaWRSb290UGFydA==')) then
-            local charPosition = player.Character.HumanoidRootPart.Position
-            local ballPosition = ball.Position
-            local distance = (ballPosition - charPosition).Magnitude
-
-            -- Điều kiện spam
-            if distance <= 15 then
-                print(ngegdKJaYobmeOTnlUpDindQbs('YzPZpfxclEquMYzOEcayBaCNJIEyrLPVLgFSgcsZVzYylhjUoHTIoKWQXV0byBTcGFtOiBCYWxsIG5lYXJieSwgc3BhbW1pbmcgYWN0aW9uIQ=='))
-                -- Thêm hành động spam tại đây (ví dụ: sử dụng kỹ năng hoặc click)
-            end
+local function autoSpam()
+    spawn(function()
+        while autoSpamActive do
+            print(NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('FVMuMjhZVCCLKGhhaXdIZrNlbsLsabGieSkOjVvBYbCszcMSyUQPZMKQXV0byBTcGFtOiBBY3RpdmF0ZWQh'))
+            wait(0.05)
         end
-        wait(math.random(0.01, 0.02)) -- Giảm độ trễ giữa các lần spam
-    end
+    end)
 end
 
--- Liên kết với nút bấm trong menu
 autoParrySwitch.MouseButton1Click:Connect(function()
     autoParryActive = not autoParryActive
-    autoParrySwitch.Text = ngegdKJaYobmeOTnlUpDindQbs('AxdaEQcRbxscmPvboqkmbXTJPHqpIxGaNHvpdYlLwhGGhkXaeONRIFiQXV0byBQYXJyeTog') .. (autoParryActive and ngegdKJaYobmeOTnlUpDindQbs('HJnDxvJfJBRhlWlRVwtBMHdXWjvjceaUtlwOdsbCcQkfnrvbNEQSgqfT04=') or ngegdKJaYobmeOTnlUpDindQbs('JtWQvspnYAIafkiKpjZJKWnmzdeNYrxbVBkYLzsrUcsSHizkiOmhIWRT0ZG'))
-    if autoParryActive then spawn(autoParryV3_0) end
+    autoParrySwitch.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('QzfPvYRJyRltKmERWSSyqYlRgWGBzZWnMLpPgGkiefOkaHAAiyuPYiCQXV0byBQYXJyeTog') .. (autoParryActive and NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('UGhDIWANzVIGtCJvEikzSGEmyVetwLlVpHnjRjxfmctoWBstVegNqHfT04=') or NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('JBKfsMStGvdNOXkXpBwAsiRQcZtbDcOuLVtNxsgZUhxjYZOTlGoLoIeT0ZG'))
+    if autoParryActive then autoParry() end
 end)
 
 autoSpamSwitch.MouseButton1Click:Connect(function()
     autoSpamActive = not autoSpamActive
-    autoSpamSwitch.Text = ngegdKJaYobmeOTnlUpDindQbs('SuifDXLEfRFjOpmrKahvBbtKBhoLgAojUDoczaIEoQSmzCtmNMXTRKyQXV0byBTcGFtOiA=') .. (autoSpamActive and ngegdKJaYobmeOTnlUpDindQbs('PHnXovDpRbREpzDSVXSmMDUctYxiUlLltQYAJRpanidZRtMaLRVhEEFT04=') or ngegdKJaYobmeOTnlUpDindQbs('cghVfezqUkXdSXvSTdXiDqGDdxHlOoYOzssybDdqGEymbQWvLTEigvDT0ZG'))
-    if autoSpamActive then spawn(autoSpamV3_0) end
-end)
-
--- Giữ menu khi reset hoặc người chơi chết
-player.CharacterAdded:Connect(function()
-    gui.Parent = player:WaitForChild(ngegdKJaYobmeOTnlUpDindQbs('lqprXbZRoRYwxJkDGihVOdKBmHMLruRmbWUINanZqcbWrIOVtcHaWYGUGxheWVyR3Vp'))
+    autoSpamSwitch.Text = NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('LGoMvnlVgmRUIYdElJVeVqdrbPjgeTwTzvOgwTiHdYQBkGBkRLzetJsQXV0byBTcGFtOiA=') .. (autoSpamActive and NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('vhKkSaTIEOnPzWiqjpnFyrwaTxpJSaDSPMYWogymzvSfFieaDtTmBNeT04=') or NBilmMrgOPurmORlnEAkIrUKcIqMuJZQpPzOPrMLiEKOlrPEZHiWl('YEAbcOrQEvXFVTdrKNKsZiajpQSbTBJNHRkwcBQzXKCFsturhBhuOGpT0ZG'))
+    if autoSpamActive then autoSpam() end
 end)
     
